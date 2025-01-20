@@ -1,6 +1,5 @@
 import React from 'react'
-import './AboutCards.css'
-import {FaAward, FaFlag} from "react-icons/fa"
+import {FaAward} from "react-icons/fa"
 import {BsBookFill} from "react-icons/bs"
 
 const AboutCards = () => {
@@ -16,7 +15,7 @@ const AboutCards = () => {
             <article className='about__card'>
               <BsBookFill className='about__icon'/>
               <h5>Formacion Universitaria</h5>
-              <p>Cursando 2do año Tecnico Analista Programador</p>
+              <p>Cursando 2do año de Analista Programador</p>
             </article>
           </div>
   )

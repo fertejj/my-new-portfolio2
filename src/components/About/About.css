@@ -44,23 +44,33 @@
 }
 
 .btn-wpp {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1rem;
+    border-radius: 1rem;
+    color: var(--primary-color);
+    gap: 0.5rem;
+
+    transition: var(--transition);
+
     margin-top: 40px;
-    padding: 15px 20px;
-    font-size: 1.2rem;
-    color: var(--bg-color);
-    text-align: center;
-    width: 65%;
-    background-color: var(--primary-color);
+
+    font-size: 1.4rem;
+
+
+    width: 50%;
+    background-color: var(--secondary-color);
     border: 1px solid var(--contrast-color);
-    border-radius: 10px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+
 }
 
+
+
 .btn-wpp:hover {
-    color: var(--contrast-color);
-    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    background-color: var(--primary-color);
 }
 
 .about__cards {
