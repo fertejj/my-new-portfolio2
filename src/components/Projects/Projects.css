@@ -43,10 +43,19 @@
     margin: 0.4rem;
 }
 
+.repobutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
 .portfolio__item-cta {
     display: flex;
     gap: 1rem;
     justify-content: center;
+
     margin-top: auto; /* Empuja los botones hacia el fondo del contenedor */
 }
 

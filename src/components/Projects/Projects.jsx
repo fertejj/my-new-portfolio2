@@ -3,12 +3,16 @@ import './Projects.css'
 import IMG1 from "../../assets/portfolio1.png"
 import IMG2 from "../../assets/portfolio2.png"
 import IMG3 from "../../assets/portfolio3.png"
+import { FiGithub } from "react-icons/fi";
+import { HiOutlineRocketLaunch } from "react-icons/hi2";
+
+
 
 const projects = [
   {
     img: IMG3,
     title: "Solutec LandingPage",
-    description: "Landing page para empresa de servicios de tecnología. Diseño y desarrollo responsive en ReactJs.",
+    description: "Landing page para empresa de servicios de tecnología. Diseño y desarrollo responsive en ReactJs y Tailwind.",
     date: "2024",
     repoLink: "https://github.com/fertejj/LANDING-SOLUTEC",
     demoLink: "https://www.solutecjuy.com/",
@@ -39,11 +43,11 @@ const PortfolioItem = ({ img, title, description, date, repoLink, demoLink }) =>
     <div className="portfolio__item-content">
       <h3>{title}</h3>
       <p>{description}</p>
-      <p>Año de creacion: {date}</p>
+      <p style={{fontWeight: '600'}}>Año de creacion: {date}</p>
     </div>
     <div className="portfolio__item-cta">
-      <a href={repoLink} className='btn' target="_blank" rel="noopener noreferrer">Repository</a>
-      <a href={demoLink} className='btn btn-primary' target="_blank" rel="noopener noreferrer">Live Demo</a>
+      <a href={repoLink} className='btn repobutton' target="_blank" rel="noopener noreferrer"><FiGithub />Repositorio</a>
+      <a href={demoLink} className='btn btn-primary repobutton' target="_blank" rel="noopener noreferrer"><HiOutlineRocketLaunch />Demo</a>
     </div>
   </article>
 );

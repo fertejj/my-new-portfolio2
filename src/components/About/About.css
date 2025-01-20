@@ -15,6 +15,7 @@
     border: 1px solid var(--contrast-color);
     border-radius: 1rem;
     padding: 1rem;
+    background-color: var(--bg-color);
 }
 
 .about__me {
@@ -75,6 +76,7 @@
     border: 1px solid var(--contrast-color);
     border-radius: 1rem;
     padding: 2rem;
+    background-color: var(--bg-color);
     text-align: center;
     transition: var(--transition);
 }

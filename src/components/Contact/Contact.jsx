@@ -35,7 +35,7 @@ const Contact = () => {
           <p>Mandame un mail directamente desde aqui si lo deseas:</p>
           <input type="text" name='name' placeholder='Nombre completo' required/>
           <input type="text" name='email' placeholder='Email' required/>
-          <textarea name="message" rows="7" placeholder='Mensaje...' required></textarea>
+          <textarea style={{fontFamily: "Montserrat",}} name="message" rows="7" placeholder='Mensaje...' required></textarea>
           <button type='submit' className='btn btn-primary'>Enviar</button>
         </form>
       </div>
