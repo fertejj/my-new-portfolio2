@@ -1,5 +1,5 @@
 import React from "react";
-import "./about.css";
+import "./About.css";
 import ME from "../../assets/fotoperfil.jpg";
 import AboutCards from "./AboutCards/AboutCards";
 
