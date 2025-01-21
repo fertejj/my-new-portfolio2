@@ -32,7 +32,7 @@ const About = () => {
                 <AboutCards />
                 <div className="contact__button">
 
-                    <a href="https://api.whatsapp.com/send/?phone=543885765045&text&type=phone_number&app_absent=0" className="btn-wpp"><FaWhatsapp />Escribeme por WhatsApp</a>
+                    <a href="https://api.whatsapp.com/send/?phone=543885765045&text&type=phone_number&app_absent=0" className="btn-wpp"><span><FaWhatsapp /></span>Escribeme por WhatsApp</a>
 
 
                 </div>
