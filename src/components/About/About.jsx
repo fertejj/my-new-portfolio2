@@ -18,22 +18,22 @@ const About = () => {
           <p className="about__text">
             Soy estudiante de segundo año de la carrera de Analista Programador.
             <br />
-            <br/>
+            <br />
             Un real apasionado por las computadoras.
             <br />
-            <br/>
+            <br />
             Cuento con experiencia en desarrollo web, utilizando tecnologías
             como React JS/TS, Firebase, XAMPP(Apache, MySQL), NodeJs con
             Express. He desarrollado pocos proyectos personales ya que me
             dedique a estudiar, ahora si he pasado a un nuevo nivel de
             aprendizaje y práctica.
             <br />
-            <br/>
+            <br />
             Actualmente, me encuentro en la fase de desarrollo de una Web App
             que será un registro de operaciones de trading con backend en
             express js mysql y frontend en react.
             <br />
-            <br/>
+            <br />
             Me interesa trabajar en equipos de trabajos dinámicos, donde pueda
             retroalimentarme de mis compañeros y poder continuar creciendo como
             profesional.
