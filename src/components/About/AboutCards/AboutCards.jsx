@@ -1,4 +1,3 @@
-import React from 'react'
 import {FaAward} from "react-icons/fa"
 import {BsBookFill} from "react-icons/bs"
 
@@ -9,7 +8,7 @@ const AboutCards = () => {
             <article className='about__card'>
               <FaAward className='about__icon'/>
               <h5>Experiencia Laboral</h5>
-              <p>6 meses trabajando como Full Stack Jr</p>
+              <p>6 meses trabajando como Front-End Trainee</p>
             </article>
 
             <article className='about__card'>
