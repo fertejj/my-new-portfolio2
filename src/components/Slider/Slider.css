@@ -1,7 +1,7 @@
 
 
 .swiper {
-  width: 300px;
+  width: 300;
   height: 300px;
 
 }
@@ -19,3 +19,7 @@
   width: 100%;
 }
 
+.section-slider{
+  margin-top: 150px;
+  margin-bottom: 80px;
+}

@@ -9,40 +9,32 @@ import "swiper/css";
 import "./Slider.css";
 
 const Slider = () => {
+  const sizeIcons = { fontSize: "250px" };
+  const icons = [
+    { id: 1, component: <FaReact style={sizeIcons} /> },
+    { id: 2, component: <RiJavascriptFill style={sizeIcons} /> },
+    { id: 3, component: <DiNodejs style={sizeIcons} /> },
+    { id: 4, component: <BiLogoTypescript style={sizeIcons} /> },
+    { id: 5, component: <FaSass style={sizeIcons} /> },
+    { id: 6, component: <SiMysql style={sizeIcons} /> },
+    { id: 7, component: <RiTailwindCssFill style={sizeIcons} /> },
+  ];
 
   return (
-    <div>
+    <section className="section-slider" id="slider">
+      <h5>Mi stack</h5>
+      <h2>de desarrollo</h2>
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
-        <SwiperSlide>
-          <FaReact style={{ fontSize: "250px" }} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <RiJavascriptFill style={{ fontSize: "250px" }} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <DiNodejs style={{ fontSize: "250px" }} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <BiLogoTypescript style={{ fontSize: "250px" }} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <FaSass style={{ fontSize: "250px" }} />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <SiMysql style={{ fontSize: "250px" }} />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <RiTailwindCssFill style={{ fontSize: "250px" }} />
-        </SwiperSlide>
+        {icons.map((icon) => (
+          <SwiperSlide key={icon.id}>{icon.component}</SwiperSlide>
+        ))}
       </Swiper>
-    </div>
+    </section>
   );
 };
 
