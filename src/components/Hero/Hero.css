@@ -1,100 +1,158 @@
-header {
-    height: 720px;
-    margin-bottom: 5rem;
-    padding-top: 5rem;
+header.hero {
+    height: 100vh;
     display: flex;
+    align-items: center;
+    margin-top: 2rem;
     justify-content: center;
-
-}
-
-.email{
+    padding: 4rem 2rem;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .hero_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(37, 28, 59,0.8);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.33);
+    border-radius: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    padding-bottom: 2rem;
+    gap: 4rem;
+    position: relative;
+  }
+  
+  .hero_left {
+    flex: 1;
+    padding: 3rem;
+    color: var(--contrast-color);
+  }
+  
+  .hero_title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  .hero_line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin: 1rem 0;
+    border-radius: 2px;
+  }
+  
+  .hero_subtitle {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: var(--text-light);
+  }
+  
+  .email {
     margin-top: 0.8rem;
     font-size: 0.9rem;
-}
-
-.header_container {
-    text-align: center;
-    height: 100%;
-    position: relative;
-}
-
-/* ======= CTA ======= */
-.cta {
-    margin-top: 2.5rem;
-    display: flex;
-    gap: 1.2rem;
-    justify-content: center;
-}
-
-/* ======= HEADER SOCIALS ======*/
-.header__socials {
-    display: flex;
-    flex-direction: column;
+  }
+  
+  .btn {
+    display: inline-flex;
     align-items: center;
-    gap: 0.8rem;
-    position: absolute;
-    left: 0;
-    bottom: 3rem;
-}
-
-.header__socials::after {
-    content: "";
-    width: 1px;
-    height: 2rem;
-    background: var(--primary-color)
-}
-
-/* ======= ME ======== */
-.me {
-    background: linear-gradient(var(--primary-color), transparent);
-    width: 22rem;
-    height: 30rem;
-    position: absolute;
-    left: calc(50% - 11rem);
-    margin-top: 4rem;
-    border-radius: 12rem 12rem 0 0;
-    overflow: hidden;
-    padding: 3rem 1.5rem 1.5rem 1.5rem;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 40px;
+    gap: 10px;
+    margin-top: 1.5rem;
     padding: 10px 20px;
-    font-size: 20px;
-    color: var(--contrast-color);;
+    font-size: 1rem;
+    color: var(--contrast-color);
     background-color: var(--bg-color);
     border: 1px solid var(--contrast-color);
     border-radius: 5px;
     text-decoration: none;
     transition: 0.3s ease;
-}
-.FaFileDownload{
-    margin-right: 10px;
-
-}
-
-.btn:hover {
+  }
+  
+  .btn:hover {
     background-color: var(--secondary-color);
-
-}
-/* ========= SCROLL DOWN ========= */
-.scroll__down {
+  }
+  
+  .hero_icons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .hero_icons div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .hero_right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero_image {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .hero_image:hover {
+    transform: scale(1.05);
+  }
+  
+  .scroll__down {
     position: absolute;
-    right: -2.3rem;
-    bottom: 5rem;
-    transform: rotate(90deg);
+    left: 50%;
+    bottom: -4rem;
+    transform: translateX(-50%);
     font-weight: 300;
-    font-size: 0.9rem;
-}
-
-/* === MEDIA QUERIES (MEDIUM DEVICES) === */
-
-/* === MEDIA QUERIES (SMALL DEVICES) === */
-@media screen and (max-width: 600px) {
-
-    .header__socials,
-    .scroll__down {
-        display: none;
+    font-size: 1rem;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateX(-50%) translateY(0);
     }
-}
+    50% {
+      transform: translateX(-50%) translateY(-10px);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero_container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .hero_icons{
+      align-items: center;
+    }
+
+
+  
+    .hero_left, .hero_right {
+      width: 100%;
+    }
+  
+    .scroll__down {
+      display: none;
+    }
+  }
+  

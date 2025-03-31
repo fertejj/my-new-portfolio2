@@ -1,4 +1,4 @@
-import React from "react";
+// Projects.jsx - Refactorizado
 import "./Projects.css";
 import IMG1 from "../../assets/portfolio1.png";
 import IMG2 from "../../assets/portfolio2.png";
@@ -8,69 +8,50 @@ import { HiOutlineRocketLaunch } from "react-icons/hi2";
 
 const projects = [
   {
-    img: IMG3,
-    title: "Solutec LandingPage",
+    img: IMG2,
+    title: "TradeReg - Registro de Operaciones",
     description:
-      "Landing page para empresa de servicios de tecnología. Diseño y desarrollo responsive en ReactJs y Tailwind.",
+      "Aplicación web desarrollada con React, TypeScript y Tailwind para registrar operaciones de trading, visualizar estadísticas clave y llevar un control detallado del rendimiento.",
+    date: "2025",
+    repoLink: "https://github.com/fertejj/tradereg-frontend",
+    demoLink: "https://tradereg-frontend.vercel.app/",
+  },
+  {
+    img: IMG3,
+    title: "Solutec Landing Page",
+    description:
+      "Landing page para empresa de servicios tecnológicos. Diseño moderno, desarrollo en React y Tailwind con enfoque responsive.",
     date: "2024",
     repoLink: "https://github.com/fertejj/LANDING-SOLUTEC",
     demoLink: "https://www.solutecjuy.com/",
   },
   {
     img: IMG1,
-    title: "ToDo List",
+    title: "ToDo List App",
     description:
-      "Aplicación de lista de tareas en ReactJs. Permite agregar, eliminar y marcar como completadas las tareas.",
+      "Aplicación de lista de tareas en React. Permite gestionar tareas con marcado, eliminación y almacenamiento local.",
     date: "2022",
     repoLink: "https://github.com/fertejj/PLATZI-react-intro",
     demoLink: "https://fertejj.github.io/PLATZI-react-intro/",
   },
-  {
-    img: IMG2,
-    title: "Landing Page HTML CSS",
-    description:
-      "Landing page responsive con HTML y CSS. Curso de desarrollo web responsive de Platzi para practicar diseño mobile first.",
-    date: "2022",
-    repoLink: "https://github.com/fertejj/mobile-first-layout-course",
-    demoLink: "https://fertejj.github.io/mobile-first-layout-course/",
-  },
 ];
 
-const PortfolioItem = ({
-  img,
-  title,
-  description,
-  date,
-  repoLink,
-  demoLink,
-}) => (
-  <article className="portfolio__item">
-    <div className="portfolio__item-image">
-      <img src={img} alt={title} />
+const ProjectCard = ({ img, title, description, date, repoLink, demoLink }) => (
+  <article className="project__card">
+    <div className="project__image">
+      <img src={img} alt={`Preview de ${title}`} loading="lazy" />
     </div>
-    <div className="portfolio__item-content">
+    <div className="project__info">
       <h3>{title}</h3>
       <p>{description}</p>
-      <p style={{ fontWeight: "600" }}>Año de creacion: {date}</p>
+      <span className="project__year">{date}</span>
     </div>
-    <div className="portfolio__item-cta">
-      <a
-        href={repoLink}
-        className="btn repobutton"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FiGithub />
-        Repositorio
+    <div className="project__cta">
+      <a href={repoLink} className="btn" target="_blank" rel="noopener noreferrer">
+        <FiGithub /> Código
       </a>
-      <a
-        href={demoLink}
-        className="btn btn-primary repobutton"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <HiOutlineRocketLaunch />
-        Demo
+      <a href={demoLink} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+        <HiOutlineRocketLaunch /> Demo
       </a>
     </div>
   </article>
@@ -78,20 +59,11 @@ const PortfolioItem = ({
 
 const Projects = () => (
   <section id="projects">
-    <h5>Mis proyectos</h5>
-    <h2>Portfolio</h2>
-    <div className="container portfolio__container">
+    <h5>Proyectos destacados</h5>
+    <h2>Mi Portfolio</h2>
+    <div className="container project__grid">
       {projects.map((project, index) => (
-        <PortfolioItem
-          className="portafolio_item"
-          key={index}
-          img={project.img}
-          title={project.title}
-          date={project.date}
-          description={project.description}
-          repoLink={project.repoLink}
-          demoLink={project.demoLink}
-        />
+        <ProjectCard key={index} {...project} />
       ))}
     </div>
   </section>

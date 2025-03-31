@@ -9,16 +9,15 @@
 }
 
 :root {
-  --primary-color: #F4F1DE;
-  --secondary-color: #b58d5a;
-  --tertiary-color: #A7CAB1;
-  --contrast-color: #F4ECD6;
-  --bg-color: #3D405B;
-
+  --primary-color: #f4f1de;
+  --secondary-color: #7da87b;
+  --tertiary-color: #a7cab1;
+  --contrast-color: #f4ecd6;
+  --bg-color: #3d405b;
+  --bg-color-variant: rgb(37, 28, 59);
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
-
   --transition: all 400ms ease;
 }
 
@@ -37,9 +36,6 @@ body {
   line-height: 1.7;
   background-image: url(./assets/bg-texture.png);
 }
-
-
-
 
 /* === GENERAL STYLES === */
 
@@ -60,15 +56,14 @@ h1 {
   font-size: 3rem;
 }
 
-
-section>h2,
-section>h5 {
+section > h2,
+section > h5 {
   text-align: center;
   font-size: 1.5rem;
   color: var(--tertiary-color);
 }
 
-section>h2 {
+section > h2 {
   color: var(--primary-color);
   margin-bottom: 3rem;
 }
@@ -79,11 +74,8 @@ section>h2 {
 
 a {
   color: var(--primary-color);
-  transition: var(--transition)
+  transition: var(--transition);
 }
-
-
-
 
 .btn-primary {
   background: var(--primary-color);
@@ -113,7 +105,7 @@ img {
     width: 95vw;
   }
 
-  section>h2 {
+  section > h2 {
     margin-top: 2rem;
   }
 }
