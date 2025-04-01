@@ -29,10 +29,10 @@ const projects = [
     img: IMG1,
     title: "ToDo List App",
     description:
-      "Aplicación de lista de tareas en React. Permite gestionar tareas con marcado, eliminación y almacenamiento local.",
-    date: "2022",
-    repoLink: "https://github.com/fertejj/PLATZI-react-intro",
-    demoLink: "https://fertejj.github.io/PLATZI-react-intro/",
+      "Aplicación de lista de tareas en React. Permite gestionar tareas con marcado, eliminación y almacenamiento local. En la v2 agrego persistencia en localStorage y muchas mejoras visuales como darkmode y un UI/UX mucho mas responsive",
+    date: "2022, Refactorizada en 2025",
+    repoLink: "https://github.com/fertejj/todo_list_ts/",
+    demoLink: "https://todo-list-ts-ruby.vercel.app/",
   },
 ];
 
