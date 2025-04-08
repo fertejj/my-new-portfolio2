@@ -3,6 +3,7 @@ import "./Projects.css";
 import IMG1 from "../../assets/portfolio1.png";
 import IMG2 from "../../assets/portfolio2.png";
 import IMG3 from "../../assets/portfolio3.png";
+import IMG4 from "../../assets/portfolio4.png";
 import { FiGithub } from "react-icons/fi";
 import { HiOutlineRocketLaunch } from "react-icons/hi2";
 
