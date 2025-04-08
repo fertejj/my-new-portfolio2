@@ -8,6 +8,15 @@ import { HiOutlineRocketLaunch } from "react-icons/hi2";
 
 const projects = [
   {
+    img: IMG4,
+    title: "MiConsulta - App turnos medicos",
+    description:
+      "Sistema completo de gestión de turnos médicos desarrollado con React, TypeScript, Tailwind CSS y Firebase. Permite a los profesionales de la salud administrar su disponibilidad, agendar turnos manualmente y visualizar reservas en una interfaz intuitiva. Incluye panel profesional, formulario multistep para registro, validaciones en tiempo real, historial de pacientes y diseño modular con arquitectura basada en features.",
+    date: "2025",
+    repoLink: "https://github.com/fertejj/turnos-salud-fertejj",
+    demoLink: "https://turnos-salud-fertejj-rtvj.vercel.app/login",
+  },
+  {
     img: IMG2,
     title: "TradeReg - Registro de Operaciones",
     description:
@@ -47,10 +56,20 @@ const ProjectCard = ({ img, title, description, date, repoLink, demoLink }) => (
       <span className="project__year">{date}</span>
     </div>
     <div className="project__cta">
-      <a href={repoLink} className="btn" target="_blank" rel="noopener noreferrer">
+      <a
+        href={repoLink}
+        className="btn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FiGithub /> Código
       </a>
-      <a href={demoLink} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+      <a
+        href={demoLink}
+        className="btn btn-primary"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <HiOutlineRocketLaunch /> Demo
       </a>
     </div>
