@@ -10,18 +10,18 @@ import { HiOutlineRocketLaunch } from "react-icons/hi2";
 const projects = [
   {
     img: IMG4,
-    title: "MiConsulta - App turnos medicos",
+    title: "MiConsulta - App turnos médicos",
     description:
-      "Sistema completo de gestión de turnos médicos desarrollado con React, TypeScript, Tailwind CSS y Firebase. Permite a los profesionales de la salud administrar su disponibilidad, agendar turnos manualmente y visualizar reservas en una interfaz intuitiva. Incluye panel profesional, formulario multistep para registro, validaciones en tiempo real, historial de pacientes y diseño modular con arquitectura basada en features.",
+      "Sistema de gestión de turnos médicos desarrollado con React, TypeScript, Tailwind CSS y Firebase. Incluye panel profesional, registro multistep, validaciones en tiempo real y diseño modular.",
     date: "2025",
     repoLink: "https://github.com/fertejj/turnos-salud-fertejj",
-    demoLink: "https://turnos-salud-fertejj-rtvj.vercel.app/login",
+    demoLink: "https://miconsulta.app/",
   },
   {
     img: IMG2,
     title: "TradeReg - Registro de Operaciones",
     description:
-      "Aplicación web desarrollada con React, TypeScript y Tailwind para registrar operaciones de trading, visualizar estadísticas clave y llevar un control detallado del rendimiento.",
+      "Aplicación MERN para registrar y analizar operaciones de trading. Ofrece gráficos interactivos, estadísticas clave y diseño responsive.",
     date: "2025",
     repoLink: "https://github.com/fertejj/tradereg-frontend",
     demoLink: "https://tradereg-frontend.vercel.app/",
@@ -30,7 +30,7 @@ const projects = [
     img: IMG3,
     title: "Solutec Landing Page",
     description:
-      "Landing page para empresa de servicios tecnológicos. Diseño moderno, desarrollo en React y Tailwind con enfoque responsive.",
+      "Landing page profesional para servicios tecnológicos. Desarrollada con React y Tailwind CSS, con diseño moderno y completamente responsive.",
     date: "2024",
     repoLink: "https://github.com/fertejj/LANDING-SOLUTEC",
     demoLink: "https://www.solutecjuy.com/",
@@ -39,7 +39,7 @@ const projects = [
     img: IMG1,
     title: "ToDo List App",
     description:
-      "Aplicación de lista de tareas en React. Permite gestionar tareas con marcado, eliminación y almacenamiento local. En la v2 agrego persistencia en localStorage y muchas mejoras visuales como darkmode y un UI/UX mucho mas responsive",
+      "Aplicación de lista de tareas en React con almacenamiento local, dark mode y diseño responsive. Refactorizada con TypeScript.",
     date: "2022, Refactorizada en 2025",
     repoLink: "https://github.com/fertejj/todo_list_ts/",
     demoLink: "https://todo-list-ts-ruby.vercel.app/",

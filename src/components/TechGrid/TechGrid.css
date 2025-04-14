@@ -1,6 +1,7 @@
 .section-tech {
   text-align: center;
   padding: 4rem 1rem;
+  background: var(--bg-color); /* Fondo general */
 }
 
 .container {
@@ -11,70 +12,107 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr); /* 4 tarjetas por fila */
+  gap: 2rem;
   margin-top: 2rem;
   place-items: center; /* centra todo en las celdas del grid */
 }
 
 .icon-card {
   background-color: var(--bg-color-variant);
-  border-radius: 1.5rem;
-  padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Sombra más sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 160px; /* 👈 ancho fijo */
-  height: 220px; /* 👈 altura fija */
+  width: 200px; /* 👈 ancho fijo */
+  height: 200px; /* 👈 altura fija */
   text-align: center;
   overflow: hidden; /* por si el contenido se desborda */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+.icon-card:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+.icon-card:nth-child(even) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .icon-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px); /* Efecto de desplazamiento */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  background-color: var(--primary-color); /* Cambio de color de fondo */
+}
+
+.icon-card:hover p {
+  color: #000; /* Cambia el texto a negro */
 }
 
 .icon-card .icon {
-  font-size: 3.5rem;
-  color: var(--primary-color);
+  font-size: 3rem;
+  color: var(--contrast-color); /* Color del ícono */
   margin-bottom: 1rem;
   line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.icon-card:hover .icon {
+  color: var(--bg-color); /* Cambia el color del ícono al hacer hover */
 }
 
 .icon-card p {
   margin: 0;
   color: var(--contrast-color);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1rem;
   line-height: 1.2;
   text-wrap: balance; /* mejor separación de líneas */
 }
 
-/* 📱 Mobile Optimización */
+/* Responsividad para pantallas más pequeñas */
+@media screen and (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 tarjetas por fila en pantallas medianas */
+  }
+}
+
+/* Responsividad para pantallas pequeñas */
 @media screen and (max-width: 600px) {
   .section-tech {
     padding: 2rem 1rem;
   }
 
   .grid-container {
-    gap: 1rem;
+    grid-template-columns: 1fr; /* 1 tarjeta por fila en pantallas pequeñas */
+    gap: 2rem; /* Aumenta el espacio entre tarjetas */
   }
 
   .icon-card {
-    padding: 1rem;
-    width: 140px; /* 👈 ancho fijo móvil */
-    height: 180px; /* 👈 altura fija móvil */
+    padding: 1.5rem; /* Aumenta el padding */
+    width: 180px; /* Ancho más grande */
+    height: 220px; /* Altura más grande */
   }
 
   .icon-card .icon {
-    font-size: 3.4rem;
+    font-size: 3.5rem; /* Íconos más grandes */
   }
 
   .icon-card p {
-    font-size: 0.95rem;
+    font-size: 1.1rem; /* Texto más grande */
+    font-weight: bold; /* Resalta el texto */
   }
 }

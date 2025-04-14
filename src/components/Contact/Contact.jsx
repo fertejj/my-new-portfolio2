@@ -1,7 +1,7 @@
-import React, {useRef} from 'react'
-import "./Contact.css"
-import {MdEmail} from 'react-icons/md'
-import emailjs from '@emailjs/browser';
+import React, { useRef } from "react";
+import "./Contact.css";
+import { MdEmail } from "react-icons/md";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
@@ -9,38 +9,68 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_wnsvo1v', 'template_nmz7jfd', form.current, 'PVIz0U5bqjOb3e1kn')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_wnsvo1v",
+        "template_nmz7jfd",
+        form.current,
+        "PVIz0U5bqjOb3e1kn"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-      });
+        }
+      );
   };
 
   return (
-    <section id='contact'>
-      <h5>Acercate!</h5>
+    <section id="contact">
+      <h5>¡Conectemos!</h5>
       <h2>Escribime</h2>
       <div className="container contact__container">
+        {/* Opciones de contacto */}
         <div className="contact__options">
           <article className="contact__option">
-            <MdEmail className='contact__option-icon'/>
+            <MdEmail className="contact__option-icon" />
             <h4>Email</h4>
             <h5>fernandojtejerina@gmail.com</h5>
-            <a href="mailto:fernandojtejerina@gmail.com">Escribir correo</a>
+            <a href="mailto:fernandojtejerina@gmail.com" target="_blank" rel="noopener noreferrer">
+              Escribir correo
+            </a>
           </article>
         </div>
-      {/* END OF CONTACT OPTIONS */}
+
+        {/* Formulario de contacto */}
         <form ref={form} onSubmit={sendEmail}>
-          <p>Mandame un mail directamente desde aqui si lo deseas:</p>
-          <input type="text" name='name' placeholder='Nombre completo' required/>
-          <input type="text" name='email' placeholder='Email' required/>
-          <textarea style={{fontFamily: "Montserrat",}} name="message" rows="7" placeholder='Mensaje...' required></textarea>
-          <button type='submit' className='btn btn-primary'>Enviar</button>
+          <p>Mandame un mensaje directamente desde aquí:</p>
+          <input
+            type="text"
+            name="name"
+            placeholder="Tu nombre completo"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Tu correo electrónico"
+            required
+          />
+          <textarea
+            name="message"
+            rows="7"
+            placeholder="Escribe tu mensaje aquí..."
+            required
+          ></textarea>
+          <button type="submit" className="btn btn-primary">
+            Enviar Mensaje
+          </button>
         </form>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

@@ -5,32 +5,26 @@ import { FaLaptopCode, FaUserGraduate, FaRocket, FaWhatsapp } from "react-icons/
 const About = () => {
   return (
     <section id="about">
-      <h5>Conocé un poco más</h5>
-      <h2>Sobre mí</h2>
-
       <div className="container about__container">
+        {/* Imagen de perfil */}
         <div className="about__left">
           <div className="about__img-wrapper">
-            <img src={ME} alt="Foto de perfil de Ferteji" loading="lazy" />
+            <img src={ME} alt="Foto de perfil de Fernando Tejerina" loading="lazy" />
           </div>
         </div>
 
+        {/* Información principal */}
         <div className="about__right">
-          <div className="about__intro">
-            <p>
-              Soy estudiante de segundo año en la carrera de <strong>Analista Programador</strong> y un apasionado por la informática desde siempre.
-            </p>
-            <p>
-              Me dedico al <strong>desarrollo web fullstack</strong>, combinando tecnologías como <strong>React JS/TS, Node.js, Express, MySQL</strong> y herramientas como <strong>Google Cloud</strong> y <strong>Mongo Atlas</strong>.
-            </p>
-            <p>
-              Actualmente estoy desarrollando una <strong>Web App de registro de operaciones de trading</strong>, combinando front y back con un enfoque profesional.
-            </p>
-            <p>
-              Me interesa colaborar en <strong>equipos dinámicos</strong>, donde el aprendizaje y la mejora constante estén presentes.
-            </p>
-          </div>
+          <h5>¡Hola! Soy</h5>
+          <h2>Fernando Tejerina</h2>
+          <p className="about__intro">
+            Soy <strong>Full-Stack Developer</strong> y estudiante universitario de <strong>Analista Programador en Sistemas</strong>. Me apasiona diseñar y desarrollar <strong>Web Apps</strong> que generen soluciones digitales innovadoras y funcionales.
+          </p>
+          <p className="about__intro">
+            Actualmente estoy trabajando en mi propio proyecto <strong>SaaS</strong>: <a href="https://www.miconsulta.app" target="_blank" rel="noopener noreferrer" className="about__link">MiConsulta.app</a>, una aplicación de gestión de consultorios diseñada para profesionales independientes de la salud.
+          </p>
 
+          {/* Tarjetas destacadas */}
           <div className="about__cards">
             <article className="about__card">
               <FaUserGraduate className="about__icon" />
@@ -41,16 +35,17 @@ const About = () => {
             <article className="about__card">
               <FaLaptopCode className="about__icon" />
               <h5>Stack Tecnológico</h5>
-              <small>React, TypeScript, Node, MySQL</small>
+              <small>React, TypeScript, Node.js, Firebase/Mongo</small>
             </article>
 
             <article className="about__card">
               <FaRocket className="about__icon" />
               <h5>Proyecto Actual</h5>
-              <small>Web App de Trading · MERN</small>
+              <small>SaaS: MiConsulta.app</small>
             </article>
           </div>
 
+          {/* Botón de contacto */}
           <a
             href="https://api.whatsapp.com/send/?phone=543885765045&text&type=phone_number&app_absent=0"
             className="btn-wpp"

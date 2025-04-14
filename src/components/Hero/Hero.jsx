@@ -2,7 +2,7 @@ import React from 'react';
 import './Hero.css';
 import ME from "../../assets/me.png";
 import CV from "../../assets/FULLSTACK-TEJERINA_FERNANDO.pdf";
-import { FaFileDownload, FaCheckCircle, FaProjectDiagram, FaCode } from "react-icons/fa";
+import { FaFileDownload, FaCheckCircle, FaProjectDiagram, FaTools } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -13,7 +13,7 @@ const Hero = () => {
           <h1 className="hero_title">Fer Tejerina</h1>
           <h3 className="text-light">Full-Stack Developer</h3>
           <p className="hero_subtitle">
-            Desarrollo soluciones digitales funcionales y escalables con el stack MERN.
+            Desarrollo soluciones digitales funcionales y escalables utilizando tecnologías adaptadas a las necesidades de cada proyecto.
           </p>
           <h6 className="email">fernandojtejerina@gmail.com</h6>
 
@@ -22,9 +22,9 @@ const Hero = () => {
           </a>
 
           <div className="hero_icons">
-            <div><FaProjectDiagram /> +3 proyectos reales</div>
-            <div><FaCode /> Stack MERN</div>
-            <div><FaCheckCircle /> En búsqueda de oportunidades</div>
+            <div><FaProjectDiagram /><span>+4 proyectos reales</span></div>
+            <div><FaTools /><span>Tecnologías adaptadas al proyecto</span></div>
+            <div><FaCheckCircle /><span>En búsqueda de oportunidades</span></div>
           </div>
         </div>
 

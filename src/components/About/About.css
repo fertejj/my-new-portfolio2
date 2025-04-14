@@ -1,6 +1,7 @@
 #about {
     padding: 4rem 1rem;
     text-align: center;
+    background: var(--bg-color);
   }
   
   .about__container {
@@ -20,8 +21,8 @@
   }
   
   .about__img-wrapper {
-    border-radius: 2rem;
-    background: linear-gradient(45deg, transparent, var(--primary-color), transparent);
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     padding: 0.5rem;
     max-width: 300px;
     aspect-ratio: 1/1;
@@ -130,4 +131,3 @@
       justify-content: center;
     }
   }
-  
