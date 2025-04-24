@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.css';
 import ME from "../../assets/me.png";
-import CV from "../../assets/CV_Fernando_Tejerina_MERN.pdf";
+import CV from "../../assets/CV_Fernando_Tejerina_MERN_FULLSTACK.pdf";
 import { FaFileDownload, FaCheckCircle, FaProjectDiagram, FaTools } from "react-icons/fa";
 
 const Hero = () => {
