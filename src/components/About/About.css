@@ -1,133 +1,180 @@
 #about {
-    padding: 4rem 1rem;
-    text-align: center;
-    background: var(--bg-color);
-  }
-  
+  padding: 4rem 1rem;
+  text-align: center;
+  background: var(--bg-color);
+}
+.section {
+  background: var(--bg-color);
+  padding: 6rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.about__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  background-color: var(--bg-color-variant);
+  padding: 3rem 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* --- LADO IZQUIERDO: Imagen --- */
+.about__left {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.about__img-wrapper {
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  padding: 0.5rem;
+  max-width: 260px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+.about__img-wrapper img {
+  border-radius: 1.5rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.about__img-wrapper img:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* --- LADO DERECHO: Info --- */
+.about__right {
+  flex: 1 1 500px;
+  color: var(--contrast-color);
+  text-align: left;
+}
+
+.about__right h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.about__right h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.about__intro {
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.about__intro strong {
+  color: var(--primary-color);
+}
+
+.about__link {
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.about__link:hover {
+  color: var(--secondary-color);
+}
+
+/* --- CARDS --- */
+.about__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.about__card {
+  background-color: var(--bg-color-variant);
+  border: 1px solid var(--contrast-color);
+  padding: 1.5rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about__icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.about__card h5 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: white;
+}
+
+.about__card small {
+  font-size: 0.85rem;
+  color: var(--contrast-color);
+}
+
+/* --- Botón WhatsApp --- */
+.btn-wpp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border: 1px solid var(--contrast-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-wpp:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
   .about__container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-    max-width: 1100px;
-    margin: 0 auto;
+    flex-direction: column;
   }
-  
-  .about__left {
-    flex: 1 1 300px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .about__img-wrapper {
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    padding: 0.5rem;
-    max-width: 300px;
-    aspect-ratio: 1/1;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .about__img-wrapper img {
-    border-radius: 1.5rem;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .about__img-wrapper img:hover {
-    transform: scale(1.05) rotate(3deg);
-  }
-  
+
   .about__right {
-    flex: 1 1 500px;
-    color: var(--contrast-color);
-  }
-  
-  .about__intro {
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
-    text-align: left;
-    line-height: 1.6;
-  }
-  
-  .about__intro strong {
-    color: var(--primary-color);
-  }
-  
-  .about__cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-  
-  .about__card {
-    background-color: var(--bg-color-variant);
-    border: 1px solid var(--contrast-color);
-    padding: 1.2rem;
-    border-radius: 1rem;
     text-align: center;
-    transition: transform 0.3s ease;
   }
-  
-  .about__card:hover {
-    transform: scale(1.05);
-  }
-  
-  .about__icon {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-  }
-  
-  .about__card h5 {
-    font-size: 1rem;
-    margin-bottom: 0.3rem;
-  }
-  
-  .about__card small {
-    font-size: 0.8rem;
-    color: var(--contrast-color);
-  }
-  
+
   .btn-wpp {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.8rem 1.2rem;
-    border-radius: 1rem;
-    font-size: 1rem;
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
-    border: 1px solid var(--contrast-color);
-    text-decoration: none;
-    transition: all 0.3s ease;
-    cursor: pointer;
+    width: 100%;
+    justify-content: center;
   }
-  
-  .btn-wpp:hover {
-    background-color: var(--primary-color);
-    color: var(--bg-color);
-  }
-  
-  /* === Responsive === */
-  @media (max-width: 768px) {
-    .about__container {
-      flex-direction: column;
-    }
-  
-    .about__intro {
-      text-align: center;
-    }
-  
-    .btn-wpp {
-      width: 100%;
-      justify-content: center;
-    }
-  }
+}

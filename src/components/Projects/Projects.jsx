@@ -14,7 +14,6 @@ const projects = [
     description:
       "Sistema de gestión de turnos médicos desarrollado con React, TypeScript, Tailwind CSS y Firebase. Incluye panel profesional, registro multistep, validaciones en tiempo real y diseño modular.",
     date: "2025",
-    repoLink: "https://github.com/fertejj/turnos-salud-fertejj",
     demoLink: "https://miconsulta.app/",
   },
   {
@@ -57,14 +56,15 @@ const ProjectCard = ({ img, title, description, date, repoLink, demoLink }) => (
       <span className="project__year">{date}</span>
     </div>
     <div className="project__cta">
-      <a
+      {repoLink ? <a
         href={repoLink}
         className="btn"
         target="_blank"
         rel="noopener noreferrer"
       >
         <FiGithub /> Código
-      </a>
+      </a> : ""}
+
       <a
         href={demoLink}
         className="btn btn-primary"
