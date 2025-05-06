@@ -37,7 +37,6 @@
 .about__img-wrapper {
   border-radius: 50%;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  padding: 0.5rem;
   max-width: 260px;
   aspect-ratio: 1/1;
   overflow: hidden;
