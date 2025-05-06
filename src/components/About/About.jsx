@@ -16,8 +16,6 @@ const About = () => {
 
         {/* Información principal */}
         <div className="about__right">
-          <h1>Fernando Tejerina</h1>
-          <h2>Full-Stack Developer · Analista Programador</h2>
 
           <p className="about__intro">
             Soy <strong>Fullstack Web Developer</strong> con formación técnica en programación y experiencia desarrollando productos digitales completos con <strong>React, TypeScript, Firebase</strong> y <strong>Google Cloud Functions</strong>. 
