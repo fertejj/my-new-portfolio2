@@ -54,7 +54,7 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaWhatsapp />
+            <FaWhatsapp size={24} />
             <span>Escribime por WhatsApp</span>
           </a>
         </div>
